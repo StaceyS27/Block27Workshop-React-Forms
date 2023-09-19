@@ -34,7 +34,7 @@ export default function Authenticate ({token}) {
     
     {error && <p>{error}</p> }
 
-    <button onClick={handleClick}>Authenticate Token</button>
+    <button className='authButton' onClick={handleClick}>Authenticate Token</button>
     </>
     )
 }

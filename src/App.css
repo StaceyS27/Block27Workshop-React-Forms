@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: antiquewhite;
 }
 
 .logo {
@@ -39,4 +40,21 @@
 
 .read-the-docs {
   color: #888;
+}
+
+body {
+  background-color: #888;
+}
+
+.submitButton {
+  background-color: greenyellow;
+  margin-top: 10%;
+}
+
+.authButton {
+  background-color: greenyellow;
+}
+
+label {
+  font-weight: 600;
 }

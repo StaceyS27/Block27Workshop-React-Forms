@@ -56,7 +56,7 @@ export default function SignUpForm({setToken}) {
             Password: {" "}
             <input value={password} onChange = {(e)=> setPassword(e.target.value)} />
             <br/>
-        <button>Submit</button>
+        <button className='submitButton'>Submit</button>
         </label>
 
     </form>
