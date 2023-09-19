@@ -9,8 +9,8 @@ function App() {
 
   return (
       <div>
-        <Authenticate token={token} setToken = {setToken}/>
         <SignUpForm token={token} setToken={setToken}/>
+        <Authenticate token={token} setToken = {setToken}/>
       
       </div>
       

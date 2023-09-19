@@ -8,6 +8,14 @@ export default function SignUpForm({setToken}) {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
 
+    function handleUserNameChange (e) {
+        if (e.target.value.length > 8) {
+            setError("Username too long");     
+        }
+        setUsername(e.target.value);
+    }
+
+
     async function handleSubmit (event) {
         event.preventDefault();
        
@@ -26,7 +34,7 @@ export default function SignUpForm({setToken}) {
             const result = await response.json();
             console.log(result);
             setToken(result.token);
-
+    
         } catch (error) {
             setError(error.message)
         }
@@ -40,8 +48,10 @@ export default function SignUpForm({setToken}) {
     <form onSubmit={handleSubmit}>
         <label>
             Username: {" "}
-             <input value={username} onChange = {(e) => setUsername(e.target.value)}/>
-        </label> <br/>
+             <input value={username} onChange = {handleUserNameChange}/>
+        </label>
+        
+         <br/>
         <label>
             Password: {" "}
             <input value={password} onChange = {(e)=> setPassword(e.target.value)} />
